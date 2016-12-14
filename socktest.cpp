@@ -19,9 +19,9 @@ int32_t get_socket() {
 }
 
 int32_t write_something() {
-    return write(my_socket, "hello", 6);
+    return write(my_socket, "hello", 5);
 }
 
 int32_t send_something() {
-    return send(my_socket, "hello", 6, 0);
+    return send(my_socket, "hello", 5, 0);
 }

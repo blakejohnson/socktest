@@ -1,10 +1,9 @@
 #include <stdint.h>
 
 // to compile:
-// gcc -c -fpic socktest.cpp
-// gcc -shared -o libsocket.dll socktest.o -lws2_32 (windows)
+// gcc -fpic -shared -o libsocket.dll -lws2_32 socktest.cpp (windows)
 // or
-// gcc -shared -o libsocket.dylib socktest.o (macOS)
+// clang -fpic -shared -o libsocket.dylib socktest.cpp (macOS)
 
 extern "C" {
     int32_t set_socket(int fd);
